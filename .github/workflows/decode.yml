@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    #防止fork乱用action设置只能手动触发构建
+  workflow_dispatch:
 jobs:
   decode:
     runs-on: ubuntu-latest
